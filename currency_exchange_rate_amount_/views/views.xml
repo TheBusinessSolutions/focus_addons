@@ -6,7 +6,7 @@
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//notebook/page[@name='order_lines']/group[1]/group[@name='sale_total']/field[@name='tax_totals_json']"
+                <xpath expr="//field[@name='tax_totals_json']"
                    position="attributes">
                     <attribute name="widget">account-exchange-tax-totals-field</attribute>
                 </xpath>
@@ -66,8 +66,7 @@
                     <group attrs="{'invisible': [('move_type', 'not in', ('out_invoice', 'out_refund', 'out_receipt'))]}">
                         <label for="foreign_currency_id"/>
                         <div class="o_row">
-                            <field name="foreign_currency_id" attrs="{'readonly': [('state', '=', 'cancel')]}"
-                                   options="{'no_edit': True, 'no_create': True, 'no_open': True, 'no_quick_create': True}"/>
+                            <field name="foreign_currency_id" attrs="{'readonly': [('state', '=', 'cancel')]}" options="{'no_edit': True, 'no_create': True, 'no_open': True, 'no_quick_create': True}"/>
                             <field name="exchange_rate"/>
                         </div>
                         <field name="exchange_total_amount" invisible="1"/>
