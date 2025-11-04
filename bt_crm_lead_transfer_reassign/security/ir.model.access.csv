@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_bt_transfer_lead,bt_transfer_lead,model_bt_transfer_lead,,1,1,1,1
+access_bt_lead_details,bt_lead_details,model_bt_lead_details,,1,1,1,1
